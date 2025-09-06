@@ -12,10 +12,10 @@ GameObject:
   - component: {fileID: 6903039634108155273}
   - component: {fileID: 2018156724468946939}
   - component: {fileID: 792806349270103817}
-  - component: {fileID: 300119370876794512}
+  - component: {fileID: -1967636191866238174}
   m_Layer: 0
   m_Name: BossBullet
-  m_TagString: Player
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -163,7 +163,7 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &300119370876794512
+--- !u!114 &-1967636191866238174
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -172,10 +172,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 4553587010631997657}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 132c0e8386bb5574e8956d368d91b49e, type: 3}
+  m_Script: {fileID: 11500000, guid: d86d9920536c993438c326560bfa23b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _rb: {fileID: 2018156724468946939}
-  force: 3
+  _rb: {fileID: 0}
+  force: 0
   damage: 1
-  playerTarget: {fileID: 0}
+  direction: {x: 0, y: 0}

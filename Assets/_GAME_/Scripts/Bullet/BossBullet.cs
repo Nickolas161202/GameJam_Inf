@@ -25,12 +25,20 @@ public class BossBullet : MonoBehaviour
 
     }
     private void OnTriggerEnter2D(Collider2D other)
-{
-        Debug.Log("Bala colidiu com o objeto: " + other.name);
+    {
+       Debug.Log("Bala DO INIMIGO atingiu algo");
+        // Ignore collision with enemies
+        if (other.CompareTag("Enemy"))
+            return;
 
-    
-            // 3. A bala cumpriu seu papel, então ela se destrói.
-            //Destroy(gameObject);
+        // Damage player if hit
+        var damageable = other.GetComponentInParent<IDamageable>();
+        if (other.CompareTag("Player") && damageable != null)
+        {
+            damageable.TakeDamage(damage);
+        }
+        // Destroy bullet on any other collision except enemy
+        Destroy(gameObject);
 
-}
+    }
 }
