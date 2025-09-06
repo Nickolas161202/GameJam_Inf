@@ -25,6 +25,10 @@ public class HealthTimer : MonoBehaviour
     {
         currentTime += timeToAdd;
     }
+    public void RemoveTime(float timeToRemove)
+    {
+        currentTime -= timeToRemove;
+    }
 
     void Update()
     {
