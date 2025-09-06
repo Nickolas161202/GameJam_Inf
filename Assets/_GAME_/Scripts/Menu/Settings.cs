@@ -2,12 +2,12 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine.Rendering.PostProcessing; 
+using UnityEngine.Rendering.PostProcessing;
 
 
 public class Settings : MonoBehaviour
 {
- public PostProcessVolume postProcessVolume;
+    public PostProcessVolume postProcessVolume;
 
     private ColorGrading colorGrading;
 
@@ -23,10 +23,9 @@ public class Settings : MonoBehaviour
         {
             Debug.LogError("Referência de PostProcessVolume não está definida ou o perfil não contém ColorGrading.");
             // Desativa o componente para evitar erros.
-            this.enabled = false; 
+            this.enabled = false;
         }
     }
-
 
     public void BackToMenu()
     {
@@ -35,7 +34,11 @@ public class Settings : MonoBehaviour
 
     public void SetVolume(float volume)
     {
-        AudioListener.volume = volume;
+        // Encontra a instância única do MusicManager e pede para ela ajustar o volume.
+        if (MusicManager.instance != null)
+        {
+            MusicManager.instance.SetMasterVolume(volume);
+        }
     }
 
     public void SetFullscreen(bool isFullscreen)
