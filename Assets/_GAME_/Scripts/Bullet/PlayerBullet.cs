@@ -27,18 +27,21 @@ public class PlayerBullet : MonoBehaviour
 
     }
     private void OnTriggerEnter2D(Collider2D other)
-{
+    {
         Debug.Log("Bala colidiu com o objeto: " + other.name);
 
-    // Verifica se atingiu um inimigo
+        // Verifica se atingiu um inimigo
         if (other.CompareTag("Enemy"))
         {
+            Debug.Log("Inimigo atingido pela bala!");
             // 1. Pega o script do inimigo que foi atingido.
             EnemyFollow enemy = other.GetComponent<EnemyFollow>();
             if (enemy != null)
             {
+                Debug.Log("Inimigo tem o script EnemyFollow, aplicando dano.");
                 // 2. Chama o método do inimigo para ele receber o dano.
                 enemy.TakeDamage(damage);
+                Debug.Log("Dano aplicado: " + damage);
             }
 
             // 3. A bala cumpriu seu papel, então ela se destrói.
@@ -49,5 +52,5 @@ public class PlayerBullet : MonoBehaviour
         {
             Destroy(gameObject);
         }
-}
+    }
 }
