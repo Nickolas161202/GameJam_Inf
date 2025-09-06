@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-=======
+
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
@@ -51,4 +50,3 @@ public class AttackManager : MonoBehaviour
 
 
 }
->>>>>>> d454d72cdc1f750f51e5beb266625c8faf1d7c9d
