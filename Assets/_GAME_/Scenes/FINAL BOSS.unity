@@ -3543,10 +3543,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ea9e1ef1ae6a2748b054203cc96ddb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerTransform: {fileID: 1058378736}
-  ballPrefab: {fileID: 8187601437351368682, guid: 3539382157d210b428e7c6363df571f5, type: 3}
-  firePoint: {fileID: 685355824}
-  attackCooldown: 3
+  playerTarget: {fileID: 1614139697}
+  rb: {fileID: 1972433213}
+  minDistance: 2
+  deadZone: 0.1
 --- !u!4 &1723307242
 Transform:
   m_ObjectHideFlags: 0
