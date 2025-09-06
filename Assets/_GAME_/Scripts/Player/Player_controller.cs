@@ -10,7 +10,6 @@ public class Player_controller : MonoBehaviour
     void Update()
     {
         GetInput();
-
     }
 
     void FixedUpdate()
