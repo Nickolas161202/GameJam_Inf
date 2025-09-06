@@ -22,32 +22,20 @@ public class PlayerBullet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //se matou o inimigo, aumentar 2 segundos no tempo do jogo.
-
 
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("Bala colidiu com o objeto: " + other.name);
-
-        // Verifica se atingiu um inimigo
-        if (other.CompareTag("Enemy"))
+        if (other.CompareTag("Player"))
+            return;
+        Debug.Log("Bala atingiu algo");
+        var damageable = other.GetComponentInParent<IDamageable>();
+        if (damageable != null)
         {
-            Debug.Log("Inimigo atingido pela bala!");
-            // 1. Pega o script do inimigo que foi atingido.
-            EnemyFollow enemy = other.GetComponent<EnemyFollow>();
-            if (enemy != null)
-            {
-                Debug.Log("Inimigo tem o script EnemyFollow, aplicando dano.");
-                // 2. Chama o método do inimigo para ele receber o dano.
-                enemy.TakeDamage(damage);
-                Debug.Log("Dano aplicado: " + damage);
-            }
-
-            // 3. A bala cumpriu seu papel, então ela se destrói.
+            Debug.Log("Identificou algo que toma dano!!!");
+            damageable.TakeDamage(damage);
             Destroy(gameObject);
         }
-        // Se atingiu qualquer outra coisa que não seja o Player, a bala também se destrói.
         else if (!other.CompareTag("Player"))
         {
             Destroy(gameObject);

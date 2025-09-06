@@ -1,10 +1,11 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
-public class Player_controller : MonoBehaviour
+public class Player_controller : MonoBehaviour, IDamageable
 {
     private Vector2 _moveDir = Vector2.zero;
     [SerializeField] float _moveSpd;
+    [SerializeField] float timeToRemove = 1.0f;
     [SerializeField] Rigidbody2D _rb;
 
     void Update()
@@ -30,5 +31,19 @@ public class Player_controller : MonoBehaviour
 
     }
 
+    public void TakeDamage(float damage)
+    {
+        HealthTimer timer = FindObjectOfType<HealthTimer>();
+            if (timer != null)
+            {
+                // 2. Adiciona os 2 segundos como recompensa.
+                timer.RemoveTime(timeToRemove);
+            }
+            else
+            {
+                Debug.LogError("ERRO: HealthTimer não foi encontrado para dar a recompensa!");
+            }
+
+    }
 
 }
