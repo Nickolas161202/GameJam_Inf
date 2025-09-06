@@ -8,6 +8,7 @@ public class HealthTimer : MonoBehaviour
     [Header("Configurações do Timer")]
     public float startTime = 60f; // Tempo máximo em segundos
     private float currentTime;
+    private bool isGameOver = false;
 
     [Header("Referências da UI")]
     public TextMeshProUGUI timeText; // Arraste seu texto aqui
@@ -27,6 +28,10 @@ public class HealthTimer : MonoBehaviour
 
     void Update()
     {
+        if (isGameOver)
+        {
+            return; // Sai do método Update imediatamente
+        }
         // Se o tempo ainda não acabou...
         if (currentTime > 0)
         {
@@ -38,6 +43,7 @@ public class HealthTimer : MonoBehaviour
         }
         else // Se o tempo acabou...
         {
+            isGameOver = true;
             currentTime = 0; // Garante que não fique negativo
             GameOver();
         }
@@ -49,6 +55,6 @@ public class HealthTimer : MonoBehaviour
         Debug.Log("GAME OVER!");
 
         // Recarrega a cena atual
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        GameManager.instance.GameOver();
     }
 }
