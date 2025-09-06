@@ -455,6 +455,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maincam: {fileID: 750316313}
+  bullet: {fileID: 0}
+  bulletTransform: {fileID: 0}
+  timeBetweenShoot: 0
 --- !u!1 &139900422
 GameObject:
   m_ObjectHideFlags: 0
@@ -794,6 +797,63 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
   CustomBlends: {fileID: 0}
+--- !u!1001 &895306546
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2209831122855573449, guid: a3d985ea09869ea48889826862f1c8c7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 2209831122855573449, guid: a3d985ea09869ea48889826862f1c8c7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 2209831122855573449, guid: a3d985ea09869ea48889826862f1c8c7, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2209831122855573449, guid: a3d985ea09869ea48889826862f1c8c7, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2209831122855573449, guid: a3d985ea09869ea48889826862f1c8c7, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2209831122855573449, guid: a3d985ea09869ea48889826862f1c8c7, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2209831122855573449, guid: a3d985ea09869ea48889826862f1c8c7, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2209831122855573449, guid: a3d985ea09869ea48889826862f1c8c7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2209831122855573449, guid: a3d985ea09869ea48889826862f1c8c7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2209831122855573449, guid: a3d985ea09869ea48889826862f1c8c7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5646519727102620996, guid: a3d985ea09869ea48889826862f1c8c7, type: 3}
+      propertyPath: m_Name
+      value: Slime
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a3d985ea09869ea48889826862f1c8c7, type: 3}
 --- !u!1 &916687581
 GameObject:
   m_ObjectHideFlags: 0
@@ -2095,7 +2155,7 @@ GameObject:
   - component: {fileID: 1614139698}
   m_Layer: 0
   m_Name: player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3423,8 +3483,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ea9e1ef1ae6a2748b054203cc96ddb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _moveSpd: 250
-  _rb: {fileID: 1972433213}
+  playerTarget: {fileID: 1614139697}
+  rb: {fileID: 1972433213}
+  minDistance: 2
+  deadZone: 0.1
 --- !u!4 &1723307242
 Transform:
   m_ObjectHideFlags: 0
@@ -3739,7 +3801,6 @@ GameObject:
   - component: {fileID: 2114266949}
   - component: {fileID: 2114266951}
   - component: {fileID: 2114266950}
-  - component: {fileID: 2114266955}
   - component: {fileID: 2114266954}
   - component: {fileID: 2114266953}
   - component: {fileID: 2114266952}
@@ -4729,19 +4790,6 @@ TilemapCollider2D:
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0
   m_UseDelaunayMesh: 0
---- !u!114 &2114266955
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2114266948}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4c149cb085833234381993287fb09c41, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maincam: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -4752,3 +4800,4 @@ SceneRoots:
   - {fileID: 1058378736}
   - {fileID: 2037890056}
   - {fileID: 1723307242}
+  - {fileID: 895306546}

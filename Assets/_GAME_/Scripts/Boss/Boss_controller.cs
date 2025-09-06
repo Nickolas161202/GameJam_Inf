@@ -8,10 +8,11 @@ public class AttackManager : MonoBehaviour
     public SecondAttack secondAttack = new SecondAttack();
     public ThirdAttack thirdAttack = new ThirdAttack();
 
+        public Transform playerTarget; // Reference to the player's transform
+        public Rigidbody2D rb; // Reference to enemy's Rigidbody2D
+        public float minDistance = 2f; // Desired range
+        public float deadZone = 0.1f;
 
-    private Vector2 _moveDir = Vector2.zero;
-    [SerializeField] float _moveSpd;
-    [SerializeField] Rigidbody2D _rb;
 
 
         void Start()
@@ -29,7 +30,7 @@ public class AttackManager : MonoBehaviour
 
     void FixedUpdate()
     {
-       // _rb.linearVelocity = _moveDir * _moveSpd * Time.fixedDeltaTime;
+    
     }
         public void SwitchState(BaseBossState currBoss)
     {
@@ -37,15 +38,7 @@ public class AttackManager : MonoBehaviour
         currentAttack.EnterState(this);
     }
 
-    public void GetInput()
-    {
-        //ARROWS
-        _moveDir = Vector2.zero;
-        if (Input.GetKey(KeyCode.UpArrow)) _moveDir.y += 1;
-        if (Input.GetKey(KeyCode.DownArrow)) _moveDir.y -= 1;
-        if (Input.GetKey(KeyCode.RightArrow)) _moveDir.x += 1;
-        if (Input.GetKey(KeyCode.LeftArrow)) _moveDir.x -= 1;
-    }
+
 
 
 }
