@@ -8,13 +8,10 @@ public class Shooting_Controller : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        maincam = GameObject.FindGameObjectWithTag("Main Camera").GetComponent<Camera>();
-
     }
 
     void Update()
     {
-        Debug.Log(Input.mousePosition);
         mousePos = maincam.ScreenToWorldPoint(Input.mousePosition);
         mousePos.z = 0f;
         transform.position = mousePos;
