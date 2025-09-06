@@ -1,46 +1,63 @@
 using UnityEngine;
-using System.Collections;
-using System.Collections.Generic;
+//using sleep
+using TMPro;
+
 public class Shooting_Controller : MonoBehaviour
 {
-    [SerializeField] Camera maincam;
-    [SerializeField] GameObject bullet;
-    [SerializeField] Transform bulletTransform;
-    private float timer;
-    [SerializeField] float timeBetweenShoot;
+    [Header("Referências")]
+    [SerializeField] private Camera maincam;
+    [SerializeField] private GameObject bullet;
+    [SerializeField] private Transform bulletTransform;
 
-    bool canShoot;
+    // 1. Crie um campo para a referência do Animator do jogador.
+    [SerializeField] private Animator playerAnimator;
+
+    [Header("Configurações")]
+    [SerializeField] private float timeBetweenShoot;
+
+    private float timer;
+    private bool canShoot;
     private Vector3 mousePos;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+
     void Start()
     {
-        mousePos = maincam.ScreenToWorldPoint(Input.mousePosition);
+        // Validação crucial para evitar erros futuros.
+        if (playerAnimator == null)
+        {
+            Debug.LogError("O Animator do Player não foi atribuído no Inspector do objeto 'Aim'!");
+        }
         canShoot = true;
-
     }
+
 
     void Update()
     {
-
-
+        // Lógica de Mira
         mousePos = maincam.ScreenToWorldPoint(Input.mousePosition);
         mousePos.z = 0f;
         transform.position = mousePos;
+
+        // Lógica de Cooldown
         if (!canShoot)
         {
-            timer += Time.fixedDeltaTime;
+            timer += Time.deltaTime;
             if (timer > timeBetweenShoot)
             {
                 canShoot = true;
             }
-
         }
+
+        // Lógica de Tiro (Simplificada)
         if (Input.GetMouseButton(0) && canShoot)
         {
+            playerAnimator.SetTrigger("Shot");
+
+            for (int i = 0; i < 10000; i++) { } // Delay bobo para a animação de tiro começar
             canShoot = false;
             timer = 0;
             Instantiate(bullet, bulletTransform.position, Quaternion.identity);
+
+            // 3. Use a referência direta e garantida.
         }
     }
-
 }
