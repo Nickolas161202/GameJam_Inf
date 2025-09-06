@@ -163,6 +163,11 @@ Animation:
   m_AnimatePhysics: 0
   m_UpdateMode: 0
   m_CullingType: 0
+--- !u!4 &44731118 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1364278268260632361, guid: a3d985ea09869ea48889826862f1c8c7, type: 3}
+  m_PrefabInstance: {fileID: 1350932973764980224}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &76645477
 GameObject:
   m_ObjectHideFlags: 0
@@ -950,6 +955,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 8707344420675629283, guid: a3d985ea09869ea48889826862f1c8c7, type: 3}
+      propertyPath: this_sprite
+      value: 
+      objectReference: {fileID: 932287431}
     - target: {fileID: 8707344420675629283, guid: a3d985ea09869ea48889826862f1c8c7, type: 3}
       propertyPath: bulletPrefab
       value: 
@@ -30923,6 +30932,11 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!4 &932287431 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1364278268260632361, guid: a3d985ea09869ea48889826862f1c8c7, type: 3}
+  m_PrefabInstance: {fileID: 750559332}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &968405789
 GameObject:
   m_ObjectHideFlags: 0
@@ -31244,6 +31258,11 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!4 &1485435444 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1364278268260632361, guid: a3d985ea09869ea48889826862f1c8c7, type: 3}
+  m_PrefabInstance: {fileID: 1528168607}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1528168607
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31308,6 +31327,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 8707344420675629283, guid: a3d985ea09869ea48889826862f1c8c7, type: 3}
+      propertyPath: this_sprite
+      value: 
+      objectReference: {fileID: 1485435444}
     - target: {fileID: 8707344420675629283, guid: a3d985ea09869ea48889826862f1c8c7, type: 3}
       propertyPath: bulletPrefab
       value: 
@@ -36718,6 +36741,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 8707344420675629283, guid: a3d985ea09869ea48889826862f1c8c7, type: 3}
+      propertyPath: this_sprite
+      value: 
+      objectReference: {fileID: 44731118}
     - target: {fileID: 8707344420675629283, guid: a3d985ea09869ea48889826862f1c8c7, type: 3}
       propertyPath: bulletPrefab
       value: 

@@ -4,6 +4,7 @@ public class EnemyShoot : MonoBehaviour
 {
     [SerializeField] GameObject bulletPrefab;
     [SerializeField] Transform playerTarget;
+    [SerializeField] Transform this_sprite;
     [SerializeField] float shootInterval = 2f;
     [SerializeField] float bulletSpeed = 5f;
 
@@ -29,8 +30,8 @@ public class EnemyShoot : MonoBehaviour
     void ShootAtPlayer()
     {
         if (playerTarget == null) return;
-        GameObject bullet = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
-        Vector2 direction = (playerTarget.position - transform.position).normalized;
+        GameObject bullet = Instantiate(bulletPrefab, this_sprite.position, Quaternion.identity);
+        Vector2 direction = (playerTarget.position - this_sprite.position).normalized;
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
         if (rb != null)
         {
