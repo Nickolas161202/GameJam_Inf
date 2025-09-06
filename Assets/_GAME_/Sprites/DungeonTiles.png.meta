@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -44,7 +44,7 @@ TextureImporter:
   lightmap: 0
   compressionQuality: 50
   spriteMode: 2
-  spriteExtrude: 1
+  spriteExtrude: 0
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
@@ -933,7 +933,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ceiling_top_1.2
+      name: DungeonTiles_38
       rect:
         serializedVersion: 2
         x: 64
@@ -955,7 +955,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ceiling_top_1.3
+      name: DungeonTiles_39
       rect:
         serializedVersion: 2
         x: 80
@@ -1087,7 +1087,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ceiling_top_1.4
+      name: DungeonTiles_45
       rect:
         serializedVersion: 2
         x: 176
@@ -1263,7 +1263,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DungeonTiles_53
+      name: Ceiling_inner_bottom_right
       rect:
         serializedVersion: 2
         x: 304
@@ -1285,7 +1285,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DungeonTiles_54
+      name: Ceiling_inner_bottom_left
       rect:
         serializedVersion: 2
         x: 320
@@ -1307,7 +1307,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DungeonTiles_55
+      name: Ceiling_inner_top_left
       rect:
         serializedVersion: 2
         x: 336
@@ -1329,7 +1329,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DungeonTiles_56
+      name: Ceiling_inner_top_right
       rect:
         serializedVersion: 2
         x: 352
@@ -1505,213 +1505,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wall_top_1
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 480
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 43fd3a70f4835304fbf640a0cf02570d
-      internalID: 144520812
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wall_top_2
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 480
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9d84da1211863bb47a87622735821f0e
-      internalID: 286963476
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wall_top_3
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 480
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8ac72b4a820b660408c257fcc8dd8757
-      internalID: 540803500
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wall_top_4
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 480
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3c87609c6d7b9ab43b82cf2a8fd98f6f
-      internalID: -298719346
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wall_top_5
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 480
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 338903b7e59fb104c9c8b11f7aa7644b
-      internalID: 1404886962
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wall_top_6
-      rect:
-        serializedVersion: 2
-        x: 80
-        y: 480
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9729f5868f723cc419c9115b42c5f119
-      internalID: 1483382444
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wall_top_7
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 480
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4ddbd851aaa4cce41ab61481c763c785
-      internalID: 788588855
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DungeonTiles_71
-      rect:
-        serializedVersion: 2
-        x: 112
-        y: 480
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 36b43eddd33291840a0eba73596a30b0
-      internalID: -1994576321
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DungeonTiles_72
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 480
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f944a7ad4e3a5b142b54777b87182a3e
-      internalID: -1911365347
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wall_bottom_1
+      name: Wall_left
       rect:
         serializedVersion: 2
         x: 0
         y: 464
         width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1725,15 +1527,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wall_bottom_2
+      name: Wall_2
       rect:
         serializedVersion: 2
         x: 16
         y: 464
         width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1747,15 +1549,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wall_bottom_3
+      name: Wall_3
       rect:
         serializedVersion: 2
         x: 32
         y: 464
         width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1769,15 +1571,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wall_bottom_4
+      name: Wall_4
       rect:
         serializedVersion: 2
         x: 48
         y: 464
         width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1791,15 +1593,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wall_bottom_5
+      name: Wall_5
       rect:
         serializedVersion: 2
         x: 64
         y: 464
         width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1813,15 +1615,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wall_bottom_6
+      name: Wall_right
       rect:
         serializedVersion: 2
         x: 80
         y: 464
         width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1835,15 +1637,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wall_bottom_7
+      name: Wall_dual_sides
       rect:
         serializedVersion: 2
         x: 96
         y: 464
         width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1863,9 +1665,9 @@ TextureImporter:
         x: 112
         y: 464
         width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1885,9 +1687,9 @@ TextureImporter:
         x: 128
         y: 464
         width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2517,7 +2319,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Floor_alone
+      name: DungeonTiles_110
       rect:
         serializedVersion: 2
         x: 400
@@ -12306,6 +12108,10 @@ TextureImporter:
       Ceiling_bottom_3: -400994256
       Ceiling_bottom_left_corner: 2123142631
       Ceiling_bottom_right_corner: 48102547
+      Ceiling_inner_bottom_left: -363644126
+      Ceiling_inner_bottom_right: -201396316
+      Ceiling_inner_top_left: -1398086257
+      Ceiling_inner_top_right: 759661967
       Ceiling_left_1: 1018103670
       Ceiling_left_2: -1473829334
       Ceiling_left_3: -1125092511
@@ -12313,15 +12119,13 @@ TextureImporter:
       Ceiling_right_2: -920577555
       Ceiling_right_3: 112737559
       Ceiling_top_1.1: 202221859
-      Ceiling_top_1.2: -1529290120
-      Ceiling_top_1.3: 850936106
-      Ceiling_top_1.4: -793415298
       Ceiling_top_2: -1160247840
       Ceiling_top_3: -1635053804
       Ceiling_top_left_corner: -501285386
       Ceiling_top_right_corner: 1790964214
       DungeonTiles_0: 1538316048
       DungeonTiles_1: 1182105097
+      DungeonTiles_110: 1182218554
       DungeonTiles_111: -1497032009
       DungeonTiles_112: 1479011376
       DungeonTiles_113: 1430221794
@@ -12598,6 +12402,7 @@ TextureImporter:
       DungeonTiles_377: -1453017007
       DungeonTiles_378: -1828767983
       DungeonTiles_379: -1785086558
+      DungeonTiles_38: -1529290120
       DungeonTiles_380: -199146621
       DungeonTiles_381: -217892356
       DungeonTiles_382: 1380679429
@@ -12608,6 +12413,7 @@ TextureImporter:
       DungeonTiles_387: -1825197356
       DungeonTiles_388: 1178063253
       DungeonTiles_389: 2000740682
+      DungeonTiles_39: 850936106
       DungeonTiles_390: -1509407088
       DungeonTiles_391: 251116826
       DungeonTiles_392: -348310798
@@ -12618,6 +12424,7 @@ TextureImporter:
       DungeonTiles_397: -640429195
       DungeonTiles_398: -284149911
       DungeonTiles_399: 1725691907
+      DungeonTiles_4: 1019945011
       DungeonTiles_40: 1100300665
       DungeonTiles_400: 513424649
       DungeonTiles_401: -794579413
@@ -12673,6 +12480,7 @@ TextureImporter:
       DungeonTiles_447: 2080135583
       DungeonTiles_448: -1326846481
       DungeonTiles_449: -396650216
+      DungeonTiles_45: -793415298
       DungeonTiles_450: 318422267
       DungeonTiles_451: -367319853
       DungeonTiles_452: -1594409064
@@ -12760,7 +12568,6 @@ TextureImporter:
       DungeonTiles_527: -1716946186
       DungeonTiles_528: 538848609
       DungeonTiles_529: 1231419064
-      DungeonTiles_53: -201396316
       DungeonTiles_530: -1097070149
       DungeonTiles_531: -392294492
       DungeonTiles_532: 1098108446
@@ -12771,7 +12578,6 @@ TextureImporter:
       DungeonTiles_537: -1789003284
       DungeonTiles_538: 679235638
       DungeonTiles_539: -742986657
-      DungeonTiles_54: -363644126
       DungeonTiles_540: -386250525
       DungeonTiles_541: -606822369
       DungeonTiles_542: 1408207850
@@ -12782,12 +12588,10 @@ TextureImporter:
       DungeonTiles_547: -167105837
       DungeonTiles_548: -524000032
       DungeonTiles_549: 1961487105
-      DungeonTiles_55: -1398086257
       DungeonTiles_550: 477897699
       DungeonTiles_551: 2036391912
       DungeonTiles_552: -522899516
       DungeonTiles_553: -881421355
-      DungeonTiles_56: 759661967
       DungeonTiles_57: 469799698
       DungeonTiles_58: -1719558365
       DungeonTiles_59: -1726638885
@@ -12802,7 +12606,6 @@ TextureImporter:
       DungeonTiles_82: -619417551
       DungeonTiles_83: -584264876
       DungeonTiles_84: 583051025
-      Floor_alone: 1182218554
       Floor_bottom_1: -1225912476
       Floor_bottom_2: -1259690302
       Floor_bottom_3: -1773419500
@@ -12840,13 +12643,13 @@ TextureImporter:
       Floor_top_3: -744138334
       Floor_top_left_1: -1790619672
       Floor_top_right_1: 1091052975
-      Wall_bottom_1: 1540806728
-      Wall_bottom_2: 1684032199
-      Wall_bottom_3: -708791696
-      Wall_bottom_4: 371093694
-      Wall_bottom_5: -10068934
-      Wall_bottom_6: 1051370851
-      Wall_bottom_7: -1556434499
+      Wall_2: 1684032199
+      Wall_3: -708791696
+      Wall_4: 371093694
+      Wall_5: -10068934
+      Wall_dual_sides: -1556434499
+      Wall_left: 1540806728
+      Wall_right: 1051370851
       Wall_top_1: 144520812
       Wall_top_2: 286963476
       Wall_top_3: 540803500
