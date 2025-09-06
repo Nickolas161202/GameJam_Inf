@@ -8,6 +8,9 @@ public class AttackManager : MonoBehaviour
     public FirstAttack firstAttack = new FirstAttack();
     public SecondAttack secondAttack = new SecondAttack();
     public ThirdAttack thirdAttack = new ThirdAttack();
+    public GameObject bossBullet;
+    public Transform bossPosition;
+    public float speed = 3f;
 
         public Transform playerTarget; // Reference to the player's transform
         public Rigidbody2D rb; // Reference to enemy's Rigidbody2D
