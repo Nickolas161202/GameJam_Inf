@@ -6,6 +6,7 @@ public class PlayerBullet : MonoBehaviour
     Camera mainCam;
     [SerializeField] Rigidbody2D _rb;
     [SerializeField] float force;
+    [SerializeField] float damage = 1f;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -21,19 +22,32 @@ public class PlayerBullet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //se matou o inimigo, aumentar 2 segundos no tempo do jogo.
+
 
     }
     private void OnTriggerEnter2D(Collider2D other)
-    {   Debug.Log("Hit tag: " + other.tag); // log the tag of whatever we hit
+{
+        Debug.Log("Bala colidiu com o objeto: " + other.name);
 
-        if (!other.CompareTag("Player")) // mais rápido e limpo
+    // Verifica se atingiu um inimigo
+        if (other.CompareTag("Enemy"))
+        {
+            // 1. Pega o script do inimigo que foi atingido.
+            EnemyFollow enemy = other.GetComponent<EnemyFollow>();
+            if (enemy != null)
+            {
+                // 2. Chama o método do inimigo para ele receber o dano.
+                enemy.TakeDamage(damage);
+            }
+
+            // 3. A bala cumpriu seu papel, então ela se destrói.
+            Destroy(gameObject);
+        }
+        // Se atingiu qualquer outra coisa que não seja o Player, a bala também se destrói.
+        else if (!other.CompareTag("Player"))
         {
             Destroy(gameObject);
         }
-        else
-        {
-            
-        }
-    
-    }
+}
 }

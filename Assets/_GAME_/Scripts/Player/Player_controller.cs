@@ -26,8 +26,8 @@ public class Player_controller : MonoBehaviour
         if (Input.GetKey(KeyCode.S)) _moveDir.y -= 1;
         if (Input.GetKey(KeyCode.D)) _moveDir.x += 1;
         if (Input.GetKey(KeyCode.A)) _moveDir.x -= 1;
-        
-        
+
+
     }
 
 

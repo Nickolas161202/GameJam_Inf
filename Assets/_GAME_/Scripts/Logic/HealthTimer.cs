@@ -19,6 +19,12 @@ public class HealthTimer : MonoBehaviour
 
     }
 
+    // Método público para adicionar tempo ao timer
+    public void AddTime(float timeToAdd)
+    {
+        currentTime += timeToAdd;
+    }
+
     void Update()
     {
         // Se o tempo ainda não acabou...

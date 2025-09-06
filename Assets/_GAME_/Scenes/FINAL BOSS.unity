@@ -627,6 +627,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &685355823
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 685355824}
+  m_Layer: 5
+  m_Name: FirePoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &685355824
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 685355823}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1723307242}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &750316311
 GameObject:
   m_ObjectHideFlags: 0
@@ -2039,9 +2070,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1058378736}
   - component: {fileID: 1058378735}
+  - component: {fileID: 1058378737}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2077,6 +2109,33 @@ Transform:
   - {fileID: 101909823}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &1058378737
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1058378734}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1422121556
 GameObject:
   m_ObjectHideFlags: 0
@@ -2118,7 +2177,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1451251629}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Visuals
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3464,9 +3523,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1723307242}
   - component: {fileID: 1723307241}
-  m_Layer: 0
+  - component: {fileID: 1723307243}
+  m_Layer: 5
   m_Name: Boss
-  m_TagString: Untagged
+  m_TagString: Laser
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3483,10 +3543,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ea9e1ef1ae6a2748b054203cc96ddb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerTarget: {fileID: 1614139697}
-  rb: {fileID: 1972433213}
-  minDistance: 2
-  deadZone: 0.1
+  playerTransform: {fileID: 1058378736}
+  ballPrefab: {fileID: 8187601437351368682, guid: 3539382157d210b428e7c6363df571f5, type: 3}
+  firePoint: {fileID: 685355824}
+  attackCooldown: 3
 --- !u!4 &1723307242
 Transform:
   m_ObjectHideFlags: 0
@@ -3501,8 +3561,36 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1451251629}
+  - {fileID: 685355824}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &1723307243
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1723307240}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1972433210
 GameObject:
   m_ObjectHideFlags: 0
@@ -3515,7 +3603,7 @@ GameObject:
   - component: {fileID: 1972433214}
   - component: {fileID: 1972433213}
   - component: {fileID: 1972433212}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: boss
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -3,7 +3,9 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
-  tags: []
+  tags:
+  - Laser
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -58,6 +60,9 @@ TagManager:
     locked: 0
   - name: player
     uniqueID: 2848587301
+    locked: 0
+  - name: Laser
+    uniqueID: 1061048931
     locked: 0
   m_RenderingLayers:
   - Default
