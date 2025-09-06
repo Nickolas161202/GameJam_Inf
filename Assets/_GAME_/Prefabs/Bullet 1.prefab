@@ -103,7 +103,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _rb: {fileID: 2018156724468946939}
-  force: 2
+  force: 10
   damage: 1
 --- !u!50 &2018156724468946939
 Rigidbody2D:

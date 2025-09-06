@@ -30904,7 +30904,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 862facc9eed9aac4ca2081e5be0c3d97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startTime: 2
+  startTime: 60
   timeText: {fileID: 1996955685}
 --- !u!4 &1082732302
 Transform:
@@ -30935,11 +30935,11 @@ PrefabInstance:
       objectReference: {fileID: 1614139697}
     - target: {fileID: 2209831122855573449, guid: a3d985ea09869ea48889826862f1c8c7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.32
+      value: -2.38
       objectReference: {fileID: 0}
     - target: {fileID: 2209831122855573449, guid: a3d985ea09869ea48889826862f1c8c7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.02
+      value: 2.04
       objectReference: {fileID: 0}
     - target: {fileID: 2209831122855573449, guid: a3d985ea09869ea48889826862f1c8c7, type: 3}
       propertyPath: m_LocalPosition.z
@@ -36379,3 +36379,4 @@ SceneRoots:
   - {fileID: 1014594319}
   - {fileID: 968405791}
   - {fileID: 1297122583}
+  - {fileID: 1082732302}
