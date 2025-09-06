@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
-public class Player_controller : MonoBehaviour
+public class Boss_controller : MonoBehaviour
 {
     private Vector2 _moveDir = Vector2.zero;
     [SerializeField] float _moveSpd;
@@ -20,15 +20,12 @@ public class Player_controller : MonoBehaviour
 
     public void GetInput()
     {
-
-        //if w, go up, if s, go down, if a, go left, if d, go right
+        //ARROWS
         _moveDir = Vector2.zero;
-        if (Input.GetKey(KeyCode.W)) _moveDir.y += 1;
-        if (Input.GetKey(KeyCode.S)) _moveDir.y -= 1;
-        if (Input.GetKey(KeyCode.D)) _moveDir.x += 1;
-        if (Input.GetKey(KeyCode.A)) _moveDir.x -= 1;
-        
-        
+        if (Input.GetKey(KeyCode.UpArrow)) _moveDir.y += 1;
+        if (Input.GetKey(KeyCode.DownArrow)) _moveDir.y -= 1;
+        if (Input.GetKey(KeyCode.RightArrow)) _moveDir.x += 1;
+        if (Input.GetKey(KeyCode.LeftArrow)) _moveDir.x -= 1;
     }
 
 
