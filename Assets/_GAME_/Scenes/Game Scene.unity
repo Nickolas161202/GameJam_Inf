@@ -367,7 +367,7 @@ GameObject:
   - component: {fileID: 101909826}
   m_Layer: 0
   m_Name: Aim
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -457,7 +457,7 @@ MonoBehaviour:
   maincam: {fileID: 750316313}
   bullet: {fileID: 4553587010631997657, guid: 5a6b3097286a58c46a00328c8dd9f785, type: 3}
   bulletTransform: {fileID: 1614139697}
-  timeBetweenShoot: 0
+  timeBetweenShoot: 2
 --- !u!1 &139900422
 GameObject:
   m_ObjectHideFlags: 0
@@ -30970,7 +30970,7 @@ GameObject:
   - component: {fileID: 1422121557}
   m_Layer: 0
   m_Name: Visuals
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31005,7 +31005,7 @@ GameObject:
   - component: {fileID: 1614139698}
   m_Layer: 0
   m_Name: Character
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
