@@ -53,6 +53,9 @@ TagManager:
   - name: Ceiling
     uniqueID: 2553561487
     locked: 0
+  - name: player
+    uniqueID: 2848587301
+    locked: 0
   m_RenderingLayers:
   - Default
   - Light Layer 1
